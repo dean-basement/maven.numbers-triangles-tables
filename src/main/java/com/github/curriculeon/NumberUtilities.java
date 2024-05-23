@@ -25,34 +25,37 @@ public class NumberUtilities {
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        //to find if a number is square you must first get sqrt of number
-        //if the sqrt is an int, the number is square
         System.out.println("start: " + start + ", stop: " + stop + ", step: " + step);
         StringBuilder answers = new StringBuilder();
-        for (int i = start; i <= stop; i+= step) {
-            double sqrt = Math.sqrt(i);
-            double floor = Math.floor(sqrt);
-            System.out.println("The square root of " + i + ": " + sqrt + ", Floor: " + floor);
-            if(sqrt == Math.floor(sqrt)){
-                System.out.println(i + " is a perfect square");
-                System.out.println(i + " was appended");
-                answers.append(i);
+        for (int i = start; i < stop; i+= step) {
+                answers.append(i*i);
             }
-        }
         return answers.toString();
     }
 
     public static String getRange(int start) {
-        return null;
+        StringBuilder answer = new StringBuilder();
+        answer.append(start);
+        return answer.toString();
     }
 
     public static String getRange(int start, int stop) {
-        return null;
+        StringBuilder answer = new StringBuilder();
+        for (int i = start; i < stop; i++) {
+            answer.append(i);
+
+        }
+        return answer.toString();
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+        StringBuilder answer = new StringBuilder();
+        for (int i = start; i < stop; i+= step) {
+            answer.append(i);
+
+        }
+        return answer.toString();
     }
 
 
