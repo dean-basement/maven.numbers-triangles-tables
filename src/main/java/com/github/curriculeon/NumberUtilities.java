@@ -25,18 +25,20 @@ public class NumberUtilities {
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        System.out.println("start: " + start + ", stop: " + stop + ", step: " + step);
-        StringBuilder answers = new StringBuilder();
+        StringBuilder answer = new StringBuilder();
         for (int i = start; i < stop; i+= step) {
-                answers.append(i*i);
+                answer.append(i*i);
             }
-        return answers.toString();
+        return answer.toString();
     }
 
-    public static String getRange(int start) {
-        StringBuilder answer = new StringBuilder();
-        answer.append(start);
-        return answer.toString();
+    public static String getRange(int stop) {
+        String result = "";
+        for(int i = 0; i < stop; i++){
+            result += i;
+        }
+        System.out.println("This is getRange with one parameter of int stop");
+        return result;
     }
 
     public static String getRange(int start, int stop) {
@@ -45,21 +47,28 @@ public class NumberUtilities {
             answer.append(i);
 
         }
+        System.out.println("This is getRange with 2 parameters, int start and int stop");
         return answer.toString();
     }
 
 
     public static String getRange(int start, int stop, int step) {
         StringBuilder answer = new StringBuilder();
-        for (int i = start; i < stop; i+= step) {
+        for (int i = start; i < stop; i += step) {
             answer.append(i);
 
         }
+        System.out.println("This is getRange with 3 parameters, start, stop, and step");
         return answer.toString();
     }
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        String answer = "";
+        for (int i = start; i < stop ; i += step) {
+            answer+=i*i;
+
+        }
+        return answer;
     }
 }
